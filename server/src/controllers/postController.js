@@ -42,11 +42,9 @@ export async function getPublishedPosts(req, res) {
 export async function getSinglePost(req, res) {
   try {
     const { slug } = req.params;
-    // Try published first
     let post = await Post.findOne({ slug, status: 'published' }).populate('author', 'name');
     if (post) return res.json(post);
 
-    // If not published, allow author to view their own draft when authenticated
     post = await Post.findOne({ slug }).populate('author', 'name');
     if (!post) return res.status(404).json({ message: 'Not found' });
     if (post.status === 'draft') {

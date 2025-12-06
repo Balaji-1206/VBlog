@@ -13,7 +13,6 @@ export function authenticate(req, res, next) {
   }
 }
 
-// Optional auth: do not fail if token missing/invalid; just proceed anonymously
 export function optionalAuth(req, _res, next) {
   const authHeader = req.headers.authorization || '';
   const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : null;

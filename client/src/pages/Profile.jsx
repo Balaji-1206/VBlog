@@ -79,7 +79,7 @@ export default function Profile(){
               </Button>
             </div>
           </Field>
-          <Field label="Email" hint="Email changes not supported in this demo">
+          <Field label="Email">
             <Input value={u.email} disabled />
           </Field>
         </div>

@@ -19,7 +19,6 @@ export default function Editor() {
       if (!postId) return
       try{
         const client = api(auth)
-        // We only have slug fetch public; for edit, fetch dashboard list and find by id
         const { data } = await client.get('/posts/dashboard/mine')
         const found = data.find(x => x._id === postId)
         if (found){

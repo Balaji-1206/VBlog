@@ -38,6 +38,5 @@ export async function login(req, res) {
 }
 
 export function logout(req, res) {
-  // With stateless JWT, client discards token. Placeholder for refresh-token revocation.
   return res.json({ message: 'Logged out' });
 }
