@@ -14,8 +14,6 @@ A full-stack blogging platform built with the MERN stack. It includes secure use
 - Auth-protected author endpoints (create, edit, delete, dashboard list).
 - Public listing with search, tags, pagination, and post details by slug.
 - Drafts vs Published status; only authors can view their own drafts.
-- Editor with live Markdown preview; Editor also supports editing via `?id=<postId>`.
-- Profile page with stats (total/published/draft), update name, change password.
-- Dashboard maintenance actions: publish/unpublish, edit, delete.
+
 
 
